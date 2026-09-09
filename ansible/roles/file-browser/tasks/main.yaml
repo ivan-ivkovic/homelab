@@ -1,0 +1,33 @@
+- name: ensure the filebrowser network exists
+  docker_network:
+    name: filebrowser
+
+- name: copy the config file to the target machine
+  copy:
+    src: ./resources/settings.json
+    dest: "/home/{{ ansible_user }}/.config/filebrowser/.filebrowser.json"
+    mode: '0755'
+
+- name: Ensure filebrowser.db exists
+  file:
+    path: "/home/{{ ansible_user }}/.config/filebrowser/filebrowser.db"
+    state: touch
+    mode: '0644'
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+
+- name: copy the shell script which starts the docker container to the target machine
+  copy:
+    src: ./check_and_run_docker.sh
+    dest: /tmp/check_and_run_docker.sh
+    mode: '0755'
+
+- name: execute the shell script
+  shell: /tmp/check_and_run_docker.sh {{ file_browser_port }} {{ container_name }} {{ ansible_user }}
+  register: result
+  ignore_errors: false
+
+- name: remove the shell script after execution
+  file:
+    path: /tmp/check_and_run_docker.sh
+    state: absent

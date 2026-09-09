@@ -1,0 +1,13 @@
+---
+- name: initial configuration of the main server
+  hosts: all
+  become: true
+
+  vars:
+    docker_users:
+      - "{{ ansible_user }}"
+
+  roles:
+    - role: geerlingguy.security
+    - role: geerlingguy.swap
+    - role: geerlingguy.docker

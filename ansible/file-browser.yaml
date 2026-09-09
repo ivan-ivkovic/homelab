@@ -1,0 +1,7 @@
+---
+- name: filebrowser deployment
+  hosts: all
+  become: true
+
+  roles:
+    - role: file-browser
