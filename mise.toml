@@ -1,0 +1,6 @@
+[env]
+KUBECONFIG = "{{config_root}}/kubeconfig"
+
+[tools]
+flux2 = "2.9"
+kubectl = "1.37"
