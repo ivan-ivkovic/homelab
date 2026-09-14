@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: linkding-pv
+spec:
+  storageClassName: ""
+  claimRef:
+    name: linkding-pvc
+    namespace: linkding
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: linkding-pvc
+  namespace: linkding
+spec:
+  storageClassName: ""
+  volumeName: linkding-pv
