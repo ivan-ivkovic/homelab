@@ -4,6 +4,10 @@ metadata:
   name: linkding-pv
 spec:
   storageClassName: ""
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
   claimRef:
     name: linkding-pvc
     namespace: linkding
