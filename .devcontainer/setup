@@ -1,7 +1,13 @@
-#!/bin/sh
-set -e
-mise trust ./mise.toml
+#!/bin/bash
+# set -e
+# mise trust ./mise.toml
+# if [ -f ./mise.local.toml ]; then
+#     mise trust ./mise.local.toml
+# fi
+# mise install
+
+/usr/local/bin/mise trust /workspaces/$DEVPOD_WORKSPACE_ID/mise.toml
 if [ -f ./mise.local.toml ]; then
     mise trust ./mise.local.toml
 fi
-mise install
+/usr/local/bin/mise install
