@@ -23,6 +23,12 @@ spec:
           ports:
             - containerPort: 9090
 
+          envFrom:
+            - configMapRef:
+                name: linkding-configmap
+            - secretRef:
+                name: linkding-secrets
+
           volumeMounts:
             - name: linkding-data
               mountPath: /etc/linkding/data
