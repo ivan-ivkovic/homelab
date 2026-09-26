@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: linkding
 resources:
   - ../../base/linkding/
-  - cloudflare.yaml
+  # - cloudflare.yaml
+  - ingress.yaml
   - tunnel-credentials.yaml
   - linkding-secrets.yaml
