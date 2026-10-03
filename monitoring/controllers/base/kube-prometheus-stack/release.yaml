@@ -30,3 +30,5 @@ spec:
       adminPassword: ivan
       ingress:
         enabled: true
+        hosts:
+          - grafana-staging.sokol.sh
