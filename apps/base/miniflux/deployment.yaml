@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: miniflux
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: miniflux
+  template:
+    metadata:
+      labels:
+        app: miniflux
+    spec:
+      securityContext:
+        fsGroup: 65534 # nofsgroup group ID
+        runAsUser: 65534 # nouser user ID
+        runAsGroup: 65534 # nogroup group ID
+
+      containers:
+        - name: miniflux
+          image: quay.io/miniflux/miniflux:2.3.3
+          ports:
+            - containerPort: 8080
+
+          envFrom:
+            - configMapRef:
+                name: miniflux-configmap
+            - secretRef:
+                name: miniflux-container-env
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: miniflux-app
+                  key: uri
+
+          securityContext:
+            allowPrivilegeEscalation: false
