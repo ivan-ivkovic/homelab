@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: miniflux-configmap
+  namespace: miniflux
+data:
+  LOG_DATE_TIME: "true"
+  DISABLE_API: "true"
+  RUN_MIGRATIONS: "1"
+  POLLING_FREQUENCY: "30"
+  POLLING_SCHEDULER: "round_robin"
+  SCHEDULER_ROUND_ROBIN_MIN_INTERVAL: "30"
+  CREATE_ADMIN: "1"

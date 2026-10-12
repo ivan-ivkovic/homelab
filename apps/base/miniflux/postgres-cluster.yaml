@@ -1,0 +1,14 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: miniflux
+  namespace: miniflux
+spec:
+  instances: 1
+  imageName: ghcr.io/cloudnative-pg/postgresql:16.10
+  storage:
+    size: 1Gi
+  bootstrap:
+    initdb:
+      database: miniflux
+      owner: miniflux
