@@ -12,3 +12,5 @@ spec:
     initdb:
       database: miniflux
       owner: miniflux
+  monitoring:
+    enablePodMonitor: true

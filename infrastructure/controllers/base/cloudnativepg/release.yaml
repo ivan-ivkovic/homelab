@@ -26,4 +26,7 @@ spec:
         target:
           kind: PrometheusRule
   values:
-    {}
+    monitoring:
+      podMonitorEnabled: true
+      grafanaDashboard:
+        create: true
