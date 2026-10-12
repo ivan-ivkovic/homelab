@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: miniflux-configmap
+  namespace: miniflux
+data:
+  BASE_URL: "https://rss-staging.sokol.sh"
