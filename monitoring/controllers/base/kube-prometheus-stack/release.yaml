@@ -31,8 +31,7 @@ spec:
       ingress:
         enabled: true
         hosts:
-          - grafana-staging.sokol.sh
+          - grafana.staging.sokol.sh
         tls:
-          - secretName: grafana-tls-secret
-            hosts:
-              - grafana-staging.sokol.sh
+          - hosts:
+              - grafana.staging.sokol.sh

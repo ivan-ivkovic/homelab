@@ -5,8 +5,11 @@ metadata:
   namespace: miniflux
 spec:
   ingressClassName: traefik
+  tls:
+    - hosts:
+        - rss.staging.sokol.sh
   rules:
-  - host: rss-staging.sokol.sh
+  - host: rss.staging.sokol.sh
     http:
       paths:
       - pathType: Prefix

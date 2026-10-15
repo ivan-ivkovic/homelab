@@ -5,8 +5,11 @@ metadata:
   namespace: linkding
 spec:
   ingressClassName: traefik
+  tls:
+    - hosts:
+        - linkding.staging.sokol.sh
   rules:
-  - host: linkding-staging.sokol.sh
+  - host: linkding.staging.sokol.sh
     http:
       paths:
       - pathType: Prefix
