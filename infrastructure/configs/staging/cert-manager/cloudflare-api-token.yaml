@@ -4,6 +4,7 @@ data:
     api-token: ENC[AES256_GCM,data:O3Z28kKuI0V4zurZOvSN7ONbAvVamFM+2fFVJCuglzLCi28dQWTfUq2GchkQC+3bE0OXJBc+vpUh/G+s1dl9RGWQAS0fgXDd,iv:DvcoxVuOQ/xDAmTlSoDtvEAFpB2PR+rGwhNdOD8C3Sc=,tag:da9UIE3Y9bu3tzCFTO1cSw==,type:str]
 metadata:
     name: cloudflare-api-token
+    namespace: cert-manager
 sops:
     age:
         - enc: |
