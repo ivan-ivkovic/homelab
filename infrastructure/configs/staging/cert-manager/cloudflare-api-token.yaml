@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 data:
-    api-token: ENC[AES256_GCM,data:O3Z28kKuI0V4zurZOvSN7ONbAvVamFM+2fFVJCuglzLCi28dQWTfUq2GchkQC+3bE0OXJBc+vpUh/G+s1dl9RGWQAS0fgXDd,iv:DvcoxVuOQ/xDAmTlSoDtvEAFpB2PR+rGwhNdOD8C3Sc=,tag:da9UIE3Y9bu3tzCFTO1cSw==,type:str]
+    api-token: ENC[AES256_GCM,data:3rgJ6ww1x5hlT+whWco0Vb5P+xPKWA4mG5ZYwVfe1Mo9BS5d3q6/CmaJXYrAwcWkrVM8AniYb/Eh5XC8sRgHcruJsYzZnkJQ,iv:DXFzSktO3HdwrB6K73POiNh55yI9oMoQ3CJMvi/r7oI=,tag:ZSjnHm+kl25E9wLoNYrmbg==,type:str]
 metadata:
     name: cloudflare-api-token
     namespace: cert-manager
@@ -9,14 +9,14 @@ sops:
     age:
         - enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAwZWcxZUExTG1vaGVRbmJv
-            TlBCMThSWkY0Nkw0Tnl4WFVNWUtZbCt1TFU0CjZoc3dBQTEyV0poZHllNEpZeThY
-            WTVwb2tPQW5wRFY2TUVlcTI3WCtvclUKLS0tIDNkT2o0SkpRdmNnL1MzSXZpd0Iv
-            NTAxSmRvWm1qQUlxd0poVTl5Z2t0K0kKhEbsxe3Rg62st4qIDTHR8aBJDWRFBdmu
-            jZpZY00uYZDkR4H59LSNs8wqmU27/dNDGn3Aj+NlfpFOEmnC6k5RWQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBWd3ZYTHQraWVudGVjYUZs
+            LzdjZzl3TzlnSmFJeHlTTU4xR0h4VFJTa2lJCkxqN25XWDRscTRiTzlUTHA1dHUv
+            RmtXWXZpS2YrS0pzMGlpbW5wMTdQT1UKLS0tIGJ4TWtZbmhKRXJXNE1ZNlh6WEJI
+            LzdsNkpXVUdjN2x4Qm5UdnpkQlhuTkkKpZFB/+2StjdmXDZRiKhNVoMQ5O2S1zzV
+            euCsqjylQYiGgBVYVyrFpr8WN2KRutgCA3W8Q1OfOzIzgcQiTdzqNg==
             -----END AGE ENCRYPTED FILE-----
           recipient: age190trgt6thma7h25pvh3z23pajxxq83rpg3x5y2pvlwa9hwhxpvmsapmcvs
     encrypted_regex: ^(data|stringData)$
-    lastmodified: "2026-10-15T19:24:19Z"
-    mac: ENC[AES256_GCM,data:TQrkM0z1nDcECriAoDRYU9QVlr/n2IzyATvAlSLh4r96QN+ZjpH/ufD1gg8DaF2X1QMfc+CWD5saabJ8W9XXawkBW3atnqvZ5+Um4Kqrmn3T/upSImPyO6f3nCob+JfgSDfjYgErdeOwfAzFlljzMnuRooU+0wJi1hrwii0yErc=,iv:39sxRe5t8DLxGS1RWHjUDZ2drNDdm87YX/WJbFWGdiM=,tag:CdUa0esMczW+bp7VRn1v8Q==,type:str]
+    lastmodified: "2026-10-15T19:53:44Z"
+    mac: ENC[AES256_GCM,data:quZ6B9H1SP09Cn4ueFp8IV/PqTnR+5OA+PyMz8eIshArmtiCUjdQNbi9Bfp6jjfnKtUyAczPx4QZhrhgF2r2D7uGkKgL+6avq+NC1pTZwccug1SlZRM7/RiZmTuzvtn8yEAEkEweQBm8if69cD660a0VJD3rub70c795sYXGcgI=,iv:1Uc7/YZ9OExx9Tu5mU6cUi+uA+8YzY4WSzdeL8MiJVI=,tag:pvt/XjYwxZ27k7T5hbIaIA==,type:str]
     version: 3.13.3
