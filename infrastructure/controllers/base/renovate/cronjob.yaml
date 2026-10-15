@@ -14,7 +14,7 @@ spec:
             - name: renovate
               image: renovate/renovate:latest
               args:
-                - ivan-ivkovic/homelab
+                - sokol-shell/homelab
               envFrom:
                 - secretRef:
                     name: renovate-container-env
